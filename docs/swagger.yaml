@@ -1,0 +1,69 @@
+definitions:
+  handler.request:
+    properties:
+      codigo:
+        type: string
+      emisor:
+        type: string
+      fecha:
+        type: string
+      moneda:
+        type: string
+      monto:
+        type: string
+      receptor:
+        type: string
+    type: object
+info:
+  contact:
+    name: API Support
+    url: https://developers.mercadolibre.com.ar/support
+  description: This API Handle MELI Transactions.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://developers.mercadolibre.com.ar/es_ar/terminos-y-condiciones
+  title: MELI Bootcamp API
+  version: "1.0"
+paths:
+  /transacciones/getAll:
+    get:
+      consumes:
+      - application/json
+      description: get transacciones
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: List transacciones
+      tags:
+      - Transacciones
+  /transacciones/store:
+    post:
+      consumes:
+      - application/json
+      description: store transacciones
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Transaction to store
+        in: body
+        name: transaction
+        required: true
+        schema:
+          $ref: '#/definitions/handler.request'
+      produces:
+      - application/json
+      responses: {}
+      summary: Store transacciones
+      tags:
+      - Transacciones
+swagger: "2.0"

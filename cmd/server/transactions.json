@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "codigo": "dueh392",
+    "moneda": "Euro",
+    "monto": "2000",
+    "emisor": "Paola",
+    "receptor": "Juan",
+    "fecha": "11-04-2003"
+  }
+]
